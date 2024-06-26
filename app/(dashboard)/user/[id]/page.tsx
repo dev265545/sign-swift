@@ -23,6 +23,7 @@ import TableMenu from "@/components/TableMenu";
 import { useSession } from "next-auth/react";
 import { ALL_DOCS } from "./signdoc/docstatus";
 import { getSession } from "next-auth/react";
+import axios from "axios";
 
 export default function Dashboard({ params }: { params: { id: string } }) {
   const router = useRouter();
@@ -37,11 +38,18 @@ export default function Dashboard({ params }: { params: { id: string } }) {
   const [user, setUser] = React.useState<any>(null);
   const [range, setRange] = React.useState<string>("0");
   const session = useSession();
-
+  const registerUser = async () => {
+    const response = await axios.post(
+      "https://sign-swift.vercel.app/api/users/registerUser",
+      session?.data?.user
+    );
+    console.log("register user");
+  };
   React.useEffect(() => {
     if (!session?.data?.user) {
       router.push("/login");
     } else {
+      registerUser();
       setUser(session.data.user);
       const cookieData = JSON.stringify(session);
       Cookies.set("session", cookieData, { expires: 1 / 3 });
