@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Signswift
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Introduction
 
-Open [https://sign-swift.vercel.app.vhttps://sign-swift.vercel.app-sign-swift.vercel.app) with your browser to see the result.
+**Signswift** is a feature-rich digital signature platform, built as a clone of DocuSign, leveraging the power of Next.js 14. It provides an intuitive and secure way to sign, send, and manage documents electronically, making document workflows smoother and more efficient.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **User Authentication**: Secure user registration and login with JWT.
+- **Document Upload**: Upload and store documents securely.
+- **Electronic Signatures**: Sign documents digitally with an easy-to-use interface.
+- **Document Management**: Organize, track, and manage documents.
+- **Real-time Notifications**: Get notified about document status changes.
+- **Audit Trail**: Track document history and ensure compliance.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Multi-Language Support**: Available in multiple languages.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend**: Next.js 14, React
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Authentication**: JWT (JSON Web Tokens)
+- **Storage**: AWS S3 for document storage
+- **Notifications**: Websockets for real-time updates
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Follow these steps to set up the project locally:
 
-## Deploy on Vercel
+1. **Clone the repository:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/your-username/signswift.git
+   cd signswift
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables:**
+
+   Create a `.env` file in the root directory and add the following:
+
+   ```env
+   DATABASE_URL=mongodb://localhost:27017/signswift
+   JWT_SECRET=your_jwt_secret
+   AWS_ACCESS_KEY_ID=your_aws_access_key_id
+   AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
+   S3_BUCKET_NAME=your_s3_bucket_name
+   ```
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Usage
+
+1. **Register an account** or **log in** if you already have one.
+2. **Upload a document** that you want to be signed.
+3. **Add signers** to the document by specifying their email addresses.
+4. **Send the document** for signing.
+5. **Track the status** of the document in your dashboard.
+6. **Sign the document** electronically using the provided interface.
+7. **Download the signed document** once all parties have signed.
+
+## Contributing
+
+We welcome contributions from the community! Here’s how you can help:
+
+1. **Fork the repository**
+2. **Create a new branch** (`git checkout -b feature-branch`)
+3. **Commit your changes** (`git commit -m 'Add some feature'`)
+4. **Push to the branch** (`git push origin feature-branch`)
+5. **Open a Pull Request**
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or support, please reach out to us at support@signswift.com.
+
+---
+
+Thank you for using Signswift! Happy signing!
+
+![Next.js](https://img.shields.io/badge/Next.js-14.0.0-blue)
+![Node.js](https://img.shields.io/badge/Node.js-14.17.0-green)
+![MongoDB](https://img.shields.io/badge/MongoDB-4.4.6-brightgreen)
+![Express](https://img.shields.io/badge/Express-4.17.1-lightgrey)
+![AWS](https://img.shields.io/badge/AWS-S3-orange)
