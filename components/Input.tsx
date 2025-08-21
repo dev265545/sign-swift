@@ -16,21 +16,24 @@ export default function Input({
       <input
         type="text"
         placeholder="Name"
+        aria-label="Name"
         className="border text-black border-gray-300 bg-white rounded-md p-2 focus:outline-none focus:border-rose-500 w-full"
         onChange={onChangeName}
       />
 
       <input
-        type="text"
+        type="email"
         placeholder="E-mail"
+        aria-label="Email"
         className="border text-black border-gray-300 bg-white rounded-md p-2 focus:outline-none focus:border-rose-500 w-full"
         onChange={onChangeEmail}
       />
       <input
         type="text"
         placeholder="SignNumber"
+        aria-label="Sign number"
         className="border text-black border-gray-300 bg-white rounded-md p-2 focus:outline-none focus:border-rose-500 w-full"
-        onChange={onChangeSignnumber}
+        onChange={onChangeEmail}
       />
     </div>
   );

@@ -6,11 +6,13 @@ const Loader = () => {
     <div
       aria-label="Loading..."
       role="status"
+      aria-live="polite"
       className="flex items-center space-x-2"
     >
       <svg
-        className="h-20 w-20 animate-spin stroke-white"
+        className="h-20 w-20 animate-sipn stroke-white"
         viewBox="0 0 256 256"
+        aria-hidden="true"
       >
         <line
           x1="128"
